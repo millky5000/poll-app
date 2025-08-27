@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin</title>
+  <link rel="stylesheet" href="/public/styles.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #000; padding: .5rem; text-align: left; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Admin Dashboard</h1>
+    <div class="stats">
+      <p>Total: <strong><%= stats.total %></strong></p>
+      <p>賛成 (agree): <strong><%= stats.counts.agree %></strong> — <%= stats.pct.agree %>%</p>
+      <p>反対 (oppose): <strong><%= stats.counts.oppose %></strong> — <%= stats.pct.oppose %>%</p>
+    </div>
+    <h2>Recent votes</h2>
+    <table>
+      <thead><tr><th>IP</th><th>Choice</th><th>Time</th></tr></thead>
+      <tbody>
+        <% rows.forEach(r => { %>
+          <tr><td><%= r.ip %></td><td><%= r.choice %></td><td><%= r.created_at %></td></tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

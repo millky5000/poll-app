@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poll</title>
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+  <main class="wrap center">
+    <h1>あなたは石破茂総理を支持しますか？</h1>
+    <p class="subtitle">Do you support Prime Minister Shigeru Ishiba?</p>
+    <form action="/vote" method="post" class="buttons">
+      <button class="btn" name="choice" value="agree">
+        <span class="jp">支持する</span>
+        <span class="en">I do support</span>
+      </button>
+      <span class="arrow">↔</span>
+      <button class="btn" name="choice" value="oppose">
+        <span class="jp">指示しない</span>
+        <span class="en">I don’t support</span>
+      </button>
+    </form>
+    <p class="subtitle faint">Please choose one</p>
+  </main>
+</body>
+</html>
